@@ -1,11 +1,36 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+<<<<<<< Updated upstream
 <title>YouView</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet" type="text/css" href="home.css">
+=======
+	<title>YouView</title>
+	<link rel="icon" href="8.png" type="image/png" sizes="16x16">
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="animeisforkids.js">
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	</script>
+	<script src="https://code.jquery.com/jquery-1.12.4.js">
+	</script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js">
+	</script>
+	<link href="home.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="anime/animate.min.css">
+	<link href="css/w3.css" rel="stylesheet" type="text/css">
+	
+	 
+>>>>>>> Stashed changes
 
 </head>
 
@@ -17,6 +42,7 @@
 
 <body onload="loadFunction()" onresize="psychsThing()">
 
+<<<<<<< Updated upstream
 
 <script>
 
@@ -25,6 +51,36 @@
 	var videoID2;
 	var videoID3;
 	var videoID4;
+=======
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a onclick="showUI()">Show Ui</a>
+		<a onclick="resetUI()">Reset All</a>
+		<a onclick="change1()">Edit Vid 1</a>
+		<a onclick="change2()">Edit Vid 2</a>
+		<a onclick="change3()">Edit Vid 3</a>
+		<a onclick="change4()">Edit Vid 4</a>
+		<a data-toggle="modal" data-target="#myModal" >Store Id's</a>
+	  </div>
+	  
+	  
+		<span class="bigbangburger " style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+	  
+	  
+	  <script>
+	  function openNav() {
+		document.getElementById("mySidenav").style.width = "250px";
+		document.getElementById("main2").style.marginLeft = "250px";
+	  }
+	  
+	  function closeNav() {
+		document.getElementById("mySidenav").style.width = "0";
+		document.getElementById("main2").style.marginLeft= "0";
+	  }
+	  </script>
+
+
+>>>>>>> Stashed changes
 	
 	const queryString = window.location.search;
 	console.log(queryString);
@@ -107,6 +163,7 @@ function loadFunction() {
 </script>
 
 
+<<<<<<< Updated upstream
   <div id="main" class="main">
 	 
   <label for="channelID">Channel ID:</label> 
@@ -119,6 +176,17 @@ function loadFunction() {
   
   
 	<script>
+=======
+	   function psychsThing() {
+	       var newStreamHeight = window.innerWidth / 32 * 9;     
+	   }
+	   
+	</script>
+	<div id="main">
+		<label for="channelID" onclick="CID.value='UCpnkOZVAhQDiy_eWcktdMFQ'; bruhTheFuckIsThis();">Channel ID:</label> <input id="CID" maxlength="24" name="CID" onfocus="this.value=''" type="text" value="Enter Channel ID Here"><br>
+		<br>
+		<button class="Submit" id="Submit" onclick="" type="button">Submit Channel ID</button>  <button class="Hide" id="Hide" onclick="hideUI();" type="button">Hide UI</button> 
+>>>>>>> Stashed changes
 		
 	document.getElementById("Submit").addEventListener("click", myClick);
 			
@@ -173,6 +241,7 @@ function loadFunction() {
             }
             */
 
+<<<<<<< Updated upstream
             console.log("and thats it.");
         
 		    i++;
@@ -249,6 +318,79 @@ function loadFunction() {
 
 
 
+=======
+		          else if (i == 2) {
+		              videoID2 = document.getElementById("CID").value;
+		              document.body.insertAdjacentHTML('beforeEnd', '<iframe id="video2" width="' + streamWidth.toString() + '%" height="' + streamHeight.toString() + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><\/iframe>');
+		              var newID = "https://www.youtube.com/embed/live_stream?channel=";
+		              var compVid = newID.concat(videoID2);
+		              video2.src = compVid;
+					  					  
+					  if (b == 2) {
+		              history.replaceState({page: 3}, "title 3", "?ID=" + videoID1 + "?ID=" + videoID2)		
+				      b = 3;
+					  } else {
+					  window.location.href = window.location.href + "?ID=" + videoID2					  
+					  }  	
+		              const queryString = window.location.search;
+		              console.log(queryString);
+		              const urlParams = new URLSearchParams(queryString);
+		              const product = urlParams.get('ID')
+		          
+		          }   
+				  
+		          else if (i == 3) {
+		              videoID3 = document.getElementById("CID").value;
+		              document.body.insertAdjacentHTML('beforeEnd', '<iframe id="video3" width="' + streamWidth.toString() + '%" height="' + streamHeight.toString() + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><\/iframe>');
+		              var newID = "https://www.youtube.com/embed/live_stream?channel=";
+		              var compVid = newID.concat(videoID3);
+		              video3.src = compVid;
+					  
+		          
+				  if (b == 3) {
+		              history.replaceState({page: 3}, "title 3", "?ID=" + videoID1 + "?ID=" + videoID2 + "?ID=" + videoID3)	
+					  b = 4;
+					  } else {
+					  window.location.href = window.location.href + "?ID=" + videoID3
+					  }
+					  
+				  
+		              const queryString = window.location.search;
+		              console.log(queryString);
+		              const urlParams = new URLSearchParams(queryString);
+		              const product = urlParams.get('ID')
+		              console.log(product);
+		          
+		          }
+		          else if (i == 4) {
+		              videoID4 = document.getElementById("CID").value;
+		              document.body.insertAdjacentHTML('beforeEnd', '<iframe id="video4" width="' + streamWidth.toString() + '%" height="' + streamHeight.toString() + '" frameborder="0" allow="accelerometer"; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><\/iframe>');
+		              var newID = "https://www.youtube.com/embed/live_stream?channel=";
+		              var compVid = newID.concat(videoID4);
+		              video4.src = compVid;
+		          
+						if (b == 4) {
+						history.replaceState({page: 3}, "title 3", "?ID=" + videoID1 + "?ID=" + videoID2 + "?ID=" + videoID3 + "?ID=" + videoID4)	 
+						} else {
+						window.location.href = window.location.href + "?ID=" + videoID4
+						}
+				
+						const queryString = window.location.search;
+						console.log(queryString);
+						const urlParams = new URLSearchParams(queryString);
+						const product = urlParams.get('ID')
+						console.log(product);
+						hideUI();
+		      		}
+			 	}
+
+		} 
+		  
+		</script>
+	</div>
+	<!--The Wintertodt is a minigame-style boss that is fought using skills rather than combat. It is located in the Northern Tundras in Great Kourend, bringing a storm of perpetual winter and unfathomable cold. According to the look-out, it is unclear what the Wintertodt actually is, but its ability to alter the weather to extremely low temperatures has earned it notoriety among the people of Great Kourend.-->
+	
+>>>>>>> Stashed changes
 
 
 </body>

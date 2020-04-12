@@ -155,4 +155,81 @@ label {
      -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
           box-shadow: inset 0px 0px 5px #c1c1c1;
    outline: none;
+<<<<<<< Updated upstream
 }
+=======
+}
+.change3:active {
+  background: #e5e5e5;
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1;
+   outline: none;
+}
+.change4:active {
+  background: #e5e5e5;
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1;
+   outline: none;
+}
+.bigbangburger{
+	border-radius: 8px;
+	background-color: #20dfa6;
+	padding:0px;
+	
+	border: none;
+	width:60px;
+	position:absolute;
+    top:0;
+    left:-5px;
+	margin-right:0px;
+	margin-top:0px;
+	outline: none;
+}
+.sidenav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	transition: 0.9s;
+	padding-top: 60px;
+  }
+  
+  .sidenav a {
+	padding: 8px 8px 8px 8px;
+	text-decoration: none;
+	font-size: 15px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+	width:100px;
+  }
+  
+  .sidenav a:hover {
+	color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	left: 0px;
+	font-size: 36px;
+	margin-left: 0px;
+  }
+  
+  #main2 {
+	  left:auto;
+	transition: margin-left .5s;
+	padding: 0px;
+  }
+  
+  @media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+  }
+>>>>>>> Stashed changes
