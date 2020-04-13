@@ -8,12 +8,15 @@
 	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"></style>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<script src="animeisforkids.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 	<link href="home.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="anime/animate.min.css">
 	<link href="css/w3.css" rel="stylesheet" type="text/css">
@@ -22,13 +25,14 @@
 
 	<div id="mySidenav" class="sidenav">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<a href="about/index.html">About Us</a>
+		
 		<a id="Show" onclick="showUI()" >Show UI</a>
 		<a onclick="resetUI()">Reset All</a>
 		<a onclick="change1()">Edit Vid 1</a>
 		<a onclick="change2()">Edit Vid 2</a>
 		<a onclick="change3()">Edit Vid 3</a>
 		<a onclick="change4()">Edit Vid 4</a>
+		<a href="about/index.html">About Us</a>
 		<a data-toggle="modal" data-target="#myModal" >Store Id's</a>
 	  </div>
 		<span class="bigbangburger " style="font-size:30px;cursor:pointer" onclick="openNav()">≡</span>
@@ -168,7 +172,8 @@
 		
 	</script>
 	<div id="main">
-		<label for="channelID" onclick="CID.value='UCpnkOZVAhQDiy_eWcktdMFQ'; bruhTheFuckIsThis();">Channel ID:</label> <input id="CID" maxlength="24" name="CID" onfocus="this.value=''" type="text" value="Enter Channel ID Here"><br>
+		<label for="channelID" onclick="CID.value='UCpnkOZVAhQDiy_eWcktdMFQ'; bruhTheFuckIsThis();">Channel ID:</label> 
+		<input id="CID" maxlength="24" name="CID" onfocus="this.value=''" type="text" value="Enter Channel ID Here"><br>
 		<br>
 		<button class="Submit" id="Submit" onclick="" type="button">Submit Channel ID</button>  <button class="Hide" id="Hide" onclick="hideUI();" type="button">Hide UI</button> 
 		
@@ -273,7 +278,6 @@
 			}
 		      
 		    function showUI() {
-				document.getElementById('Show').style.visibility="hidden";
 				document.getElementById('main').style.visibility="visible";                               
 		    }
 		          
@@ -366,5 +370,7 @@
 	</div>
 	<!--The Wintertodt is a minigame-style boss that is fought using skills rather than combat. It is located in the Northern Tundras in Great Kourend, bringing a storm of perpetual winter and unfathomable cold. According to the look-out, it is unclear what the Wintertodt actually is, but its ability to alter the weather to extremely low temperatures has earned it notoriety among the people of Great Kourend.-->
 	
+
+
 </body>
 </html>
