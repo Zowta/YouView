@@ -6,11 +6,13 @@ body {
   margin: 0;
   background-color:#2b313b;
   text-align:center;
-  overflow: hidden
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
 }
 
 /* Main column */
-.main {   
+#main {   
   -ms-flex: 70%; /* IE10 */
   flex: 70%;
 
@@ -26,7 +28,7 @@ body {
   background-image: linear-gradient(130deg, rgba(23,23,38,1) 47%, rgba(86,17,138,1) 100%);
   padding: 18px;
   text-align: center;
-  opacity:100%;
+  opacity:85%;
   border-radius: 25px;
   z-index:1;
 }
@@ -60,7 +62,7 @@ label {
 	padding:4px;
 	border: none;
 	position:relative;
-	left:12%;
+	left:5%;
 	outline: none;
 }
 
@@ -74,24 +76,11 @@ label {
 	padding-left:15px;
 	border: none;
 	
-	left:15%;
-	margin-right:20px;
-	outline: none;
-}
-.redirect {
-	
-	position:relative;
-	border-radius: 8px;
-	background-color: #ffffff;
-	padding:4px;
-	padding-right:10px;
-	padding-left:10px;
-	border: none;
-	
-	left:15%;
+	left:5%;
 	margin-right:10px;
 	outline: none;
 }
+
 .Show {
      
 	border-radius: 8px;
@@ -101,15 +90,16 @@ label {
 	padding-left:15px;
 	border: none;
 	
+	width:95px;
     position:absolute;
     top:0;
     right:0;
-	margin-right:20px;
+	margin-right:10px;
 	margin-top:20px;
 	visibility:hidden;
  }
  
- .scrubEnd {	 
+ .reset{	 
     border-radius: 8px;
 	background-color: #ffffff;
 	padding:4px;
@@ -117,14 +107,103 @@ label {
 	padding-left:15px;
 	border: none;
 	
+	width:95px;
 	position:absolute;
     top:0;
     right:0;
-	margin-right:20px;
+	margin-right:10px;
 	margin-top:55px;
-
-
+	outline: none;
  }
+ 
+  .change1{	 
+    border-radius: 8px;
+	background-color: #ffffff;
+	padding:4px;
+	padding-right:15px;
+	padding-left:15px;
+	border: none;
+	width:95px;
+	position:absolute;
+    top:0;
+    right:0;
+	margin-right:10px;
+	margin-top:90px;
+	outline: none;
+ }
+
+  .change2{	 
+    border-radius: 8px;
+	background-color: #ffffff;
+	padding:4px;
+	padding-right:15px;
+	padding-left:15px;
+	border: none;
+	width:95px;
+	position:absolute;
+    top:0;
+    right:0;
+	margin-right:10px;
+	margin-top:125px;
+	outline: none;
+ }
+   .change3{	 
+    border-radius: 8px;
+	background-color: #ffffff;
+	padding:4px;
+	padding-right:15px;
+	padding-left:15px;
+	border: none;
+	width:95px;
+	position:absolute;
+    top:0;
+    right:0;
+	margin-right:10px;
+	margin-top:160px;
+	outline: none;
+ }
+   .change4{	 
+    border-radius: 8px;
+	background-color: #ffffff;
+	padding:4px;
+	padding-right:15px;
+	padding-left:15px;
+	border: none;
+	width:95px;
+	position:absolute;
+    top:0;
+    right:0;
+	margin-right:10px;
+	margin-top:195px;
+	outline: none;
+ }
+
+   .modalCSS{	 
+    border-radius: 8px;
+	background-color: #a862bd;
+	padding:4px;
+	padding-right:15px;
+	padding-left:15px;
+	border: none;
+	width:95px;
+	position:absolute;
+    top:0;
+    right:0;
+	margin-right:10px;
+	margin-top:260px;
+	outline: none;
+	color:white;
+ }
+ 
+ #form1 {
+	 font-size:21px;
+ }
+ 
+ textarea.md-textarea {
+  min-height: 30rem;
+  min-width: 50rem;
+  resize: none;
+}
 
 .Submit:active {
   background: #e5e5e5;
@@ -149,15 +228,28 @@ label {
    outline: none;
 }
 
-.Show2:active {
+.reset:active {
   background: #e5e5e5;
   -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
      -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
           box-shadow: inset 0px 0px 5px #c1c1c1;
    outline: none;
-<<<<<<< Updated upstream
 }
-=======
+
+.change1:active {
+  background: #e5e5e5;
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1;
+   outline: none;
+}
+
+.change2:active {
+  background: #e5e5e5;
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1;
+   outline: none;
 }
 .change3:active {
   background: #e5e5e5;
@@ -174,7 +266,8 @@ label {
    outline: none;
 }
 .bigbangburger{
-	border-radius: 8px;
+	border-radius: 0px;
+	border-bottom-right-radius: 10px;
 	background-color: #20dfa6;
 	padding:0px;
 	
@@ -230,6 +323,6 @@ label {
   
   @media screen and (max-height: 450px) {
 	.sidenav {padding-top: 15px;}
+	.sidenav {width: 100px;}
 	.sidenav a {font-size: 18px;}
   }
->>>>>>> Stashed changes
