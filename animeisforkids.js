@@ -36,7 +36,7 @@ document.addEventListener('keydown', function(e) {
     konamiCodePosition = 0;
   }
 });
-
+//https://www.youtube.com/embed/OdZrFtIGzfU?start=11&autoplay=1
 function activateCheats() {
-	document.body.insertAdjacentHTML('beforeEnd', '<iframe id="video1" width="1920" height="980" src="https://www.youtube.com/embed/OdZrFtIGzfU?start=11&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+    document.body.insertAdjacentHTML('beforeEnd', '<iframe id="video1" width="1920" height="980" src="https://www.youtube.com/embed/Pw1Qlb8gZLY?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
 }
