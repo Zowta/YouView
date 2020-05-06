@@ -194,7 +194,7 @@ label {
 	padding-right:15px;
 	padding-left:15px;
 	border: none;
-	width:95px;
+	width:0px;
 	position:absolute;
     top:0;
     right:0;
@@ -210,7 +210,7 @@ label {
  
  textarea.md-textarea {
   min-height: 30rem;
-  min-width: 50rem;
+  min-width: 100%;
   resize: none;
 }
 
@@ -331,7 +331,7 @@ label {
   }
   
   #main2 {
-	  left:auto;
+	left:auto;
 	transition: margin-left .5s;
 	padding: 0px;
   }
