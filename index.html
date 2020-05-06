@@ -13,7 +13,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<script src="animeisforkids.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
@@ -123,7 +122,7 @@
 
 					document.body.insertAdjacentHTML('beforeEnd', '<iframe id="video1" width="' + streamWidth.toString() + '%" height="' + streamHeight.toString() + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><\/iframe>');
 					var newID = "https://www.youtube.com/embed/live_stream?channel=";
-					var compVid = newID.concat(prod1);
+					var compVid = newID.concat(prod1 + "&autoplay=1&mute=1");
 					video1.src = compVid;
 					i = 1;
 				
@@ -133,7 +132,7 @@
 
 						document.body.insertAdjacentHTML('beforeEnd', '<iframe id="video2" width="' + streamWidth.toString() + '%" height="' + streamHeight.toString() + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><\/iframe>');
 						var newID = "https://www.youtube.com/embed/live_stream?channel=";
-						var compVid = newID.concat(prod2);
+						var compVid = newID.concat(prod2 + "&autoplay=1&mute=1");
 						video2.src = compVid;
 						i = 2;                  
 						
@@ -144,7 +143,7 @@
 								
 							document.body.insertAdjacentHTML('beforeEnd', '<iframe id="video3" width="' + streamWidth.toString() + '%" height="' + streamHeight.toString() + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><\/iframe>');
 							var newID = "https://www.youtube.com/embed/live_stream?channel=";
-							var compVid = newID.concat(prod3);
+							var compVid = newID.concat(prod3 + "&autoplay=1&mute=1");
 							video3.src = compVid;
 							i = 3;
 							
@@ -156,7 +155,7 @@
 										
 								document.body.insertAdjacentHTML('beforeEnd', '<iframe id="video4" width="' + streamWidth.toString() + '%" height="' + streamHeight.toString() + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><\/iframe>');
 								var newID = "https://www.youtube.com/embed/live_stream?channel=";
-								var compVid = newID.concat(prod4);
+								var compVid = newID.concat(prod4 + "&autoplay=1&mute=1");
 								video4.src = compVid;
 								hideUI();
 																						
@@ -171,14 +170,15 @@
 		}
 		
 	</script>
+	
 	<div id="main">
 		<label for="channelID" onclick="CID.value='UCpnkOZVAhQDiy_eWcktdMFQ'; bruhTheFuckIsThis();">Channel ID:</label> 
 		<input id="CID" maxlength="24" name="CID" onfocus="this.value=''" type="text" value="Enter Channel ID Here"><br>
 		<br>
 		<button class="Submit" id="Submit" onclick="" type="button">Submit Channel ID</button>  <button class="Hide" id="Hide" onclick="hideUI();" type="button">Hide UI</button> 
-		
-		<script> 
-			  
+
+		<script>  
+
 		 	document.getElementById("Submit").addEventListener("click", myClick);
 		              
 		      //$( function() {
@@ -188,6 +188,7 @@
 		                      
 			function bruhTheFuckIsThis() {
 			document.body.style.cursor = 'url("uhoh.cur"), default';
+			playVid();
 			}
 						
 			function resetUI(elem) 
@@ -209,7 +210,7 @@
 			}
 
 			function change1()
-			{			 
+			{			
 				var txt;
 			  	var newChannel = prompt("Please enter Video 1's new Channel ID:", "Channel ID");
 			  	if (newChannel == null || newChannel == "")
@@ -282,6 +283,7 @@
 		    }
 		          
 		    function myClick() {
+				
 		        if (document.getElementById("CID").value.length < 24) {
 		        alert("A Youtube channel ID is 24 characters long.");
 		        }else{
@@ -296,9 +298,9 @@
 				
 		        if (i == 1) {
 		            videoID1 = document.getElementById("CID").value;
-		            document.body.insertAdjacentHTML('beforeEnd', '<iframe id="video1" width="' + streamWidth.toString() + '%" height="' + streamHeight.toString() + '" frameborder="0" allow="accelerometer; allow="autoplay=1"; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><\/iframe>');
+		            document.body.insertAdjacentHTML('beforeEnd', '<iframe id="video1" width="' + streamWidth.toString() + '%" height="' + streamHeight.toString() + '" frameborder="0"  allow="accelerometer; allow="autoplay=1"; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
 		            var newID = "https://www.youtube.com/embed/live_stream?channel=";
-		            var compVid = newID.concat(videoID1);	
+		            var compVid = newID.concat(videoID1 + "&autoplay=1");	
 		            video1.src = compVid;
 					  
 					history.replaceState({page: 3}, "title 3", "?ID=" + videoID1);
@@ -309,9 +311,9 @@
 		            const product = urlParams.get('ID');	          
 		        }else if(i == 2){
 		            videoID2 = document.getElementById("CID").value;
-		            document.body.insertAdjacentHTML('beforeEnd', '<iframe id="video2" width="' + streamWidth.toString() + '%" height="' + streamHeight.toString() + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><\/iframe>');
+		            document.body.insertAdjacentHTML('beforeEnd', '<iframe id="video2" width="' + streamWidth.toString() + '%" height="' + streamHeight.toString() + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
 		            var newID = "https://www.youtube.com/embed/live_stream?channel=";
-		            var compVid = newID.concat(videoID2);
+		            var compVid = newID.concat(videoID2 + "&autoplay=1&mute=1");
 		            video2.src = compVid; 					  
 					if (b == 2) {
 		              history.replaceState({page: 3}, "title 3", "?ID=" + videoID1 + "?ID=" + videoID2)		
@@ -325,9 +327,9 @@
 		              const product = urlParams.get('ID');
 		        }else if (i == 3) {
 		            videoID3 = document.getElementById("CID").value;
-		            document.body.insertAdjacentHTML('beforeEnd', '<iframe id="video3" width="' + streamWidth.toString() + '%" height="' + streamHeight.toString() + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><\/iframe>');
+		            document.body.insertAdjacentHTML('beforeEnd', '<iframe id="video3" width="' + streamWidth.toString() + '%" height="' + streamHeight.toString() + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
 		            var newID = "https://www.youtube.com/embed/live_stream?channel=";
-		            var compVid = newID.concat(videoID3);
+		            var compVid = newID.concat(videoID3 + "&autoplay=1&mute=1");
 		            video3.src = compVid;       
 				    if (b == 3) {
 		              history.replaceState({page: 3}, "title 3", "?ID=" + videoID1 + "?ID=" + videoID2 + "?ID=" + videoID3)	
@@ -345,9 +347,9 @@
 		          
 		            }else if (i == 4){
 						videoID4 = document.getElementById("CID").value;
-						document.body.insertAdjacentHTML('beforeEnd', '<iframe id="video4" width="' + streamWidth.toString() + '%" height="' + streamHeight.toString() + '" frameborder="0" allow="accelerometer"; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><\/iframe>');
+						document.body.insertAdjacentHTML('beforeEnd', '<iframe id="video4" width="' + streamWidth.toString() + '%" height="' + streamHeight.toString() + '" frameborder="0" allow="accelerometer"; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
 						var newID = "https://www.youtube.com/embed/live_stream?channel=";
-						var compVid = newID.concat(videoID4);
+						var compVid = newID.concat(videoID4 + "&autoplay=1&mute=1");
 						video4.src = compVid;
 						if (b == 4) {
 							history.replaceState({page: 3}, "title 3", "?ID=" + videoID1 + "?ID=" + videoID2 + "?ID=" + videoID3 + "?ID=" + videoID4)	 
