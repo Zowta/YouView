@@ -70,6 +70,7 @@
 	
 	   document.getElementById("form1").addEventListener("keyup", storedID);
 	   
+	   
 			function storedID() 
 			{
 				localStorage.setItem("lastname", form1.value);
@@ -180,6 +181,14 @@
 		<script>  
 
 		 	document.getElementById("Submit").addEventListener("click", myClick);
+			
+			var input = document.getElementById("CID");
+			input.addEventListener("keyup", function(event) {
+			  if (event.keyCode === 13) {
+			   event.preventDefault();
+			   document.getElementById("Submit").click();
+			  }
+			});
 		              
 		      //$( function() {
 		          //$( "#main" ).draggable();
@@ -281,10 +290,14 @@
 		    function showUI() {
 				document.getElementById('main').style.visibility="visible";                               
 		    }
-		          
+
+			
+			var CIDString = document.getElementById("CID");
+			//var bar = CIDString.indexOf("UC");
+				 
 		    function myClick() {
-				
-		        if (document.getElementById("CID").value.length < 24) {
+			
+			    if (CIDString.value.length < 24){
 		        alert("A Youtube channel ID is 24 characters long.");
 		        }else{
 		        var streamWidth = 50;
